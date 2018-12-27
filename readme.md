@@ -1,5 +1,9 @@
 <h1 align="center">Inventory Manager</h1>
 
+![](https://img.shields.io/github/downloads/rpm192/Laravel-Inventory-Manager/total.svg?style=for-the-badge)
+![](https://img.shields.io/github/license/rpm192/Laravel-Inventory-Manager.svg?style=for-the-badge)
+<hr>
+
 Inventory-Manager is an open-source stock / inventory management application based on the PHP-framework Laravel.
 
 Currently, Inventory-Manager supports these features to help manage your inventory:
