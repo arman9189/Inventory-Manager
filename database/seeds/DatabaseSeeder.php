@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        // call UsersTableSeeder and create default admin user
+        $this->call(UsersTableSeeder::class);
     }
 }

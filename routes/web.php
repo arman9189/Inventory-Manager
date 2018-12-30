@@ -15,11 +15,15 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Auth::routes();
+// disables register
+Auth::routes(['register' => false]);
+
+// redirect requests to register to login
+Route::get('/register', function () {
+  return view('auth.login')->with('error', 'Registration is not possible.');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
 
 Route::resource('products', 'ProductsController')->middleware('auth');
 Route::resource('product-categories', 'ProductCategoriesController')->middleware('auth');
