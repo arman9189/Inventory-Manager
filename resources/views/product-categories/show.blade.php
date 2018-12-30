@@ -15,7 +15,7 @@
 						<h3 class="box-title">Product category {{$category->name}}</h3>
 					</div>
 					<div class="box-body">
-						<dl class="dl-horizontal">
+						<dl class="dl-vertical">
 							<dt>Category name</dt>
 							<dd>{{$category->name}}</dd>
 							<dt>Created at</dt>

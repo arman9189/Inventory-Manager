@@ -56,13 +56,13 @@
     					<div class="col-sm-6">
     						<div class="form-group">
     							{{Form::label('sales_price', 'Sales price')}}
-    				      {{Form::number('sales_price', $product->sales_price, ['class' => 'form-control', 'placeholder' => 'Sales price'])}}
+    				      {{Form::number('sales_price', $product->sales_price, ['step' => '0.01', 'class' => 'form-control', 'placeholder' => 'Sales price'])}}
     						</div>
     					</div>
               <div class="col-sm-6">
                 <div class="form-group">
                   {{Form::label('buy_price', 'Buy-in price')}}
-                  {{Form::number('buy_price', $product->buy_price, ['class' => 'form-control', 'placeholder' => 'Buy-in price'])}}
+                  {{Form::number('buy_price', $product->buy_price, ['step' => '0.01', 'class' => 'form-control', 'placeholder' => 'Buy-in price'])}}
                 </div>
               </div>
     				</div>
