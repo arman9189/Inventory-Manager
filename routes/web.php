@@ -23,6 +23,10 @@ Route::get('/register', function () {
   return view('auth.login')->with('error', 'Registration is not possible.');
 });
 
+Route::get('/settings', 'SettingsController@index')->middleware('auth');
+Route::get('/settings/edit', 'SettingsController@edit')->middleware('auth');
+Route::post('/settings/edit', 'SettingsController@update')->middleware('auth');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('products', 'ProductsController')->middleware('auth');
