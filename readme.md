@@ -24,7 +24,6 @@ Features that are currently being implemented:
 
 * See the total value of the inventory per storage location
 * Multiple roles within the application to manage your employees
-* A database-seeder for an easier setup
 
 ## 🚀 Quick setup
 
@@ -51,10 +50,19 @@ DB_USERNAME=yourUser
 DB_PASSWORD=yourPassword
 ```
 
-To finish the setup, migrate your database and generate an app-key!
+To finish the setup, migrate and seed your database and generate an app-key!
 
 ```
 // migrate the database
 php artisan migrate:fresh
 php artisan key:generate
+php artisan db:seed
+```
+
+You can now login with the following credentials:
+
+```
+// user credentials
+email: administrator@stockmanager.local
+password: stockmanagerdefault
 ```
