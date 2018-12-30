@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Product categories')
+@section('title', 'Storage location')
 
 @section('content_header')
-    <h1>Product category {{$category->name}}</h1>
+    <h1>Storage location {{$location->name}}</h1>
 @stop
 
 @section('content')
@@ -12,14 +12,22 @@
 			<div class="col-sm-3">
 				<div class="box box-danger">
 					<div class="box-header with-border">
-						<h3 class="box-title">Product category {{$category->name}}</h3>
+						<h3 class="box-title">Product location {{$location->name}}</h3>
 					</div>
 					<div class="box-body">
-						<dl class="dl-horizontal">
-							<dt>Category name</dt>
-							<dd>{{$category->name}}</dd>
+						<dl class="dl-vertical">
+							<dt>Location name</dt>
+							<dd>{{$location->name}}</dd>
+              <dt>Address</dt>
+              <dd>{{$location->street}} {{$location->house_number}}</dd>
+              <dt>Postal / zipcode</dt>
+              <dd>{{$location->postal}}</dd>
+              <dt>State / Province / County</dt>
+              <dd>{{$location->state_province_county}}</dd>
+              <dt>Country</dt>
+              <dd>{{$location->country}}</dd>
 							<dt>Created at</dt>
-							<dd>{{$category->created_at}}</dd>
+							<dd>{{$location->created_at}}</dd>
 						</dl>
 					</div>
 				</div>
@@ -28,7 +36,7 @@
 			<div class="col-sm-9">
 				<div class="box box-danger">
 					<div class="box-header with-border">
-						<h3 class="box-title">Products in category {{$category->name}}</h3>
+						<h3 class="box-title">Products at location {{$location->name}}</h3>
 					</div>
 					<div class="box-body">
 						<table class="table" id="datatable">
@@ -40,32 +48,32 @@
 									<th>Buy-in price</th>
 									<th>Instock</th>
 									<th>Discontinued</th>
-									<th></th>
+                  <th>Quantity at this location</th>
 								</tr>
 							</thead>
 							<tbody>
 
-								@foreach ($products as $product)
+								@foreach ($stocks as $stock)
 									<tr>
-										<td>{{$product->id}}</td>
-										<td>{{$product->name}}</td>
-										<td>{{$product->sales_price}}</td>
-										<td>{{$product->buy_price}}</td>
+										<td>{{$stock->product->id}}</td>
+										<td>{{$stock->product->name}}</td>
+										<td>{{$stock->product->sales_price}}</td>
+										<td>{{$stock->product->buy_price}}</td>
 										<td>
-											@if ($product->instock == 1)
+											@if ($stock->product->instock == 1)
 												Yes
 											@else
 												No
 											@endif
 										</td>
 										<td>
-											@if ($product->discontinued == 1)
+											@if ($stock->product->discontinued == 1)
 												Yes
 											@else
 												No
 											@endif
 										</td>
-										<td><a href="/products/{{$product->id}}/edit" class="btn btn-default">Edit</a></td>
+                    <td>{{$stock->quantity}}</td>
 									</tr>
 								@endforeach
 

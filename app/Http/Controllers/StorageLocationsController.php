@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\StorageLocation;
+use App\ProductStock;
 use Illuminate\Http\Request;
 
 class StorageLocationsController extends Controller
@@ -73,9 +74,14 @@ class StorageLocationsController extends Controller
      * @param  \App\StorageLocation  $storageLocation
      * @return \Illuminate\Http\Response
      */
-    public function show(StorageLocation $storageLocation)
+    public function show($storageLocation)
     {
-        //
+        // get the storage location and its products
+        $location = StorageLocation::find($storageLocation);
+        $stocks = ProductStock::where('storage_location_id', '=', $storageLocation)->get();
+
+        // return view
+        return view('storage-locations.show')->with('location', $location)->with('stocks', $stocks);
     }
 
     /**
