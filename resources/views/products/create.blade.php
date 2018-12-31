@@ -30,7 +30,7 @@
               <div class="col-sm-12">
                 <div class="form-group">
                   {{Form::label('description', 'Product description')}}
-                  {{Form::textarea('description', '', ['id' => 'ckeditor', 'class' => 'form-control', 'style' => 'resize: vertical', 'placeholder' => 'Product description'])}}
+                  {{Form::textarea('description', '', ['id' => 'ck-textarea', 'class' => 'form-control ck-textarea', 'style' => 'resize: vertical', 'placeholder' => 'Product description'])}}
                 </div>
               </div>
             </div>
@@ -94,4 +94,6 @@
 
 @section('js')
   <script src="{{asset('js/render_select2.js')}}" charset="utf-8"></script>
+  <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+  <script src="{{asset('js/render_ckeditor.js')}}" charset="utf-8"></script>
 @endsection

@@ -1,1 +1,1 @@
-CKEDITOR.replace('#ckeditor');
+CKEDITOR.replace("ck-textarea");
