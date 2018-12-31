@@ -52,3 +52,7 @@
 			</div>
     </div>
 @stop
+
+@section('js')
+  <script src="{{asset('js/render_select2.js')}}" charset="utf-8"></script>
+@endsection
