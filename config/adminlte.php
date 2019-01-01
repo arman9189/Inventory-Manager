@@ -143,7 +143,7 @@ return [
         ],
         [
             'text' => 'Move products',
-            'url'  => '/#',
+            'url'  => '/stock/move',
             'icon' => 'arrows',
         ],
         'STORAGE LOCATIONS',

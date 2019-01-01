@@ -39,3 +39,6 @@ Route::post('/stock/add', 'ProductStocksController@addStock')->middleware('auth'
 
 Route::get('/stock/remove', 'ProductStocksController@removeView')->middleware('auth');
 Route::post('/stock/remove', 'ProductStocksController@removeStock')->middleware('auth');
+
+Route::get('/stock/move', 'ProductStocksController@moveView')->middleware('auth');
+Route::post('/stock/move', 'ProductStocksController@moveStock')->middleware('auth');
