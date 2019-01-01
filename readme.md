@@ -70,3 +70,12 @@ You can now login with the following credentials:
 email: administrator@stockmanager.local
 password: stockmanagerdefault
 ```
+## 🔧 Bug reporting
+
+Found an issue / bug? Want to report it? Please include __at least__ the following:
+
+* Brief description of the issue
+* An errorcode, if you have one
+* The shortest amount of steps to reproduce the issue
+
+If you have a possible solution / an idea what might cause the issue, feel free to include it.
