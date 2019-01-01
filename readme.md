@@ -24,6 +24,10 @@ Features that are currently being implemented:
 
 * See the total value of the inventory per storage location
 * Multiple roles within the application to manage your employees
+* Add customers to your system
+* Create orders, with products and assign them to customers
+* Manage the status of orders
+* Update stock automatically after creating an order
 
 ## 🚀 Quick setup
 
