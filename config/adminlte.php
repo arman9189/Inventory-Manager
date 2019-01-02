@@ -174,6 +174,17 @@ return [
             'url'  => '/suppliers',
             'icon' => 'search',
         ],
+        'CUSTOMERS',
+        [
+            'text' => 'New customer',
+            'url'  => '/customers/create',
+            'icon' => 'plus',
+        ],
+        [
+            'text' => 'View customers',
+            'url'  => '/customers',
+            'icon' => 'search',
+        ],
         'OTHER',
         [
             'text' => 'Settings',
