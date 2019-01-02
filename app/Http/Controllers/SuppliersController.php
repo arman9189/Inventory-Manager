@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Supplier;
+use App\Product;
 use Illuminate\Http\Request;
 
 class SuppliersController extends Controller
@@ -65,9 +66,16 @@ class SuppliersController extends Controller
      * @param  \App\Supplier  $supplier
      * @return \Illuminate\Http\Response
      */
-    public function show(Supplier $supplier)
+    public function show($supplier_id)
     {
-        //
+        // get supplier and products
+        $supplier = Supplier::find($supplier_id);
+        $products = Product::where([
+          ['supplier_id', '=', $supplier_id],
+        ])->get();
+
+        // return view
+        return view('suppliers.show')->with('supplier', $supplier)->with('products', $products);
     }
 
     /**

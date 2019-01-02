@@ -108,6 +108,12 @@ return [
     */
 
     'menu' => [
+        'MAIN NAVIGATION',
+        [
+            'text' => 'Dashboard',
+            'url'  => '/home',
+            'icon' => 'dashboard',
+        ],
         'PRODUCT MANAGEMENT',
         [
             'text' => 'New product',
