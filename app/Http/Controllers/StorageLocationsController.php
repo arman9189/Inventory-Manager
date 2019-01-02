@@ -78,7 +78,10 @@ class StorageLocationsController extends Controller
     {
         // get the storage location and its products
         $location = StorageLocation::find($storageLocation);
-        $stocks = ProductStock::where('storage_location_id', '=', $storageLocation)->get();
+        $stocks = ProductStock::where([
+          ['storage_location_id', '=', $storageLocation],
+          ['quantity', '>', 0],
+        ])->get();
 
         // return view
         return view('storage-locations.show')->with('location', $location)->with('stocks', $stocks);
