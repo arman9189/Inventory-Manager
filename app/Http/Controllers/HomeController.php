@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Order;
 
 use Illuminate\Http\Request;
 
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // get recent orders
+        $orders = Order::orderBy('id', 'DESC')->take(10)->get();
+
+        return view('home')->with('orders', $orders);
     }
 }
