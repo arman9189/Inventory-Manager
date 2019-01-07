@@ -38,6 +38,7 @@ Route::resource('product-categories', 'ProductCategoriesController')->middleware
 Route::resource('suppliers', 'SuppliersController')->middleware('auth');
 Route::resource('storage-locations', 'StorageLocationsController')->middleware('auth');
 Route::resource('customers', 'CustomersController')->middleware('auth');
+Route::resource('orders', 'OrdersController')->middleware('auth');
 
 Route::get('/stock/add', 'ProductStocksController@addView')->middleware('auth');
 Route::post('/stock/add', 'ProductStocksController@addStock')->middleware('auth');

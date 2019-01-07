@@ -185,6 +185,17 @@ return [
             'url'  => '/customers',
             'icon' => 'search',
         ],
+        'ORDERS',
+        [
+            'text' => 'New order',
+            'url'  => '/orders/create',
+            'icon' => 'plus',
+        ],
+        [
+            'text' => 'View orders',
+            'url'  => '/orders',
+            'icon' => 'search',
+        ],
         'OTHER',
         [
             'text' => 'Settings',
