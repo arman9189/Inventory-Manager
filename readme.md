@@ -1,4 +1,5 @@
-<h1 align="center">Inventory Manager</h1>
+![alt text](https://raw.githubusercontent.com/rpm192/Laravel-Inventory-Manager/master/public/img/branding/im-logo.png)
+<hr>
 
 ![](https://img.shields.io/github/downloads/rpm192/Laravel-Inventory-Manager/total.svg?style=for-the-badge)
 ![](https://img.shields.io/github/license/rpm192/Laravel-Inventory-Manager.svg?style=for-the-badge)
