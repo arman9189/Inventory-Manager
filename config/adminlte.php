@@ -196,6 +196,17 @@ return [
             'url'  => '/orders',
             'icon' => 'search',
         ],
+        'USERS',
+        [
+            'text' => 'New user',
+            'url'  => '/users/create',
+            'icon' => 'plus',
+        ],
+        [
+            'text' => 'View users',
+            'url'  => '/users',
+            'icon' => 'search',
+        ],
         'OTHER',
         [
             'text' => 'Settings',

@@ -48,3 +48,10 @@ Route::post('/stock/remove', 'ProductStocksController@removeStock')->middleware(
 
 Route::get('/stock/move', 'ProductStocksController@moveView')->middleware('auth');
 Route::post('/stock/move', 'ProductStocksController@moveStock')->middleware('auth');
+
+Route::get('/users/create', 'UsersController@create')->middleware('auth');
+Route::post('/users/create', 'UsersController@store')->middleware('auth');
+Route::get('/users', 'UsersController@index')->middleware('auth');
+Route::get('/users/{id}/edit', 'UsersController@edit')->middleware('auth');
+Route::put('/users/{id}', 'UsersController@update')->middleware('auth');
+Route::delete('/users/{id}', 'UsersController@destroy')->middleware('auth');
