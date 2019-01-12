@@ -12,7 +12,7 @@
 			<div class="col-sm-12">
 				<div class="box box-danger">
 					<div class="box-header with-border">
-						<h3 class="box-title">About Inventory-Manager</h3>
+						<img src="{{asset('/img/branding/im-logo.png')}}" height="30" alt="">
 					</div>
 					<div class="box-body">
             <p>Inventory-Manager is an open-source stock / inventory management application based on the PHP-framework Laravel.</p>
