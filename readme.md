@@ -80,3 +80,15 @@ Found an issue / bug? Want to report it? Please include __at least__ the followi
 * The shortest amount of steps to reproduce the issue
 
 If you have a possible solution / an idea what might cause the issue, feel free to include it.
+
+__Please, do not request support if you're using an outdated version.__
+
+## 💻 Credits
+
+[AdminLTE](https://adminlte.io/themes/AdminLTE/index2.html) Inventory-Manager uses the front-end theme AdminLTE for the entirety of it's front-end.
+
+## 📜 License
+
+Inventory-Manager is open source and licensed under the MPL 2.0 license.
+
+Inventory Manager &copy; 2019
