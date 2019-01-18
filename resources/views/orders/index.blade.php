@@ -22,6 +22,7 @@
 									<th>Customer name</th>
 									<th>Status</th>
 									<th>Created at</th>
+                  <th></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -42,9 +43,10 @@
 
 	                <tr>
 	                  <td>{{$order->id}}</td>
-	                  <td>{{$order->customer->name}}</td>
+	                  <td><a href="/customers/{{$order->customer->id}}">{{$order->customer->name}}</a></td>
 	                  <td><span class="label label-{{$label}}">{{$order->status}}</span></td>
 	                  <td>{{$order->created_at}}</td>
+                    <td><a href="/orders/{{$order->id}}" class="btn btn-default">View</a></td>
 	                </tr>
 	              @endforeach
 

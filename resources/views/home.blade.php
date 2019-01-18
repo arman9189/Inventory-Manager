@@ -38,7 +38,7 @@
             <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
           </div>
         </div>
-        <!-- /.box-header -->
+
         <div class="box-body">
           <div class="table-responsive">
             <table class="table no-margin">
@@ -77,16 +77,13 @@
               </tbody>
             </table>
           </div>
-          <!-- /.table-responsive -->
+
         </div>
-        <!-- /.box-body -->
         <div class="box-footer clearfix">
           <a href="/orders/create" class="btn btn-sm btn-default pull-left">New Order</a>
-          <a href="javascript:void(0)" class="btn btn-sm btn-default pull-right">All orders</a>
+          <a href="/orders" class="btn btn-sm btn-default pull-right">All orders</a>
         </div>
-        <!-- /.box-footer -->
       </div>
-      <!-- /.box -->
     </div>
     </div>
   </div>

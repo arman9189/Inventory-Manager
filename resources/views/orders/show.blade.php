@@ -37,12 +37,12 @@
 									<th>Product name</th>
 									<th>Quantity</th>
 									<th>Price per product</th>
-                  <th>Total</th>
+                  <th class="text-right">Total</th>
 								</tr>
 							</thead>
 							<tbody>
 
-                @php $i = 0; @endphp
+                @php $i = 0; $total = 0; @endphp
                 @foreach ($products as $product)
                   @php
 
@@ -50,6 +50,7 @@
                     $current_product_total_price_unformatted = $product->sales_price * $product->quantity;
                     $current_product_total_price = number_format($current_product_total_price_unformatted, 2);
 
+                    $total = $total + $current_product_total_price_unformatted;
 
                   @endphp
                   <tr>
@@ -57,9 +58,13 @@
                     <td>{{$product->name}} (#{{$product->id}})</td>
                     <td>{{$product->quantity}}</td>
                     <td>&euro;{{$product->sales_price}}</td>
-                    <td>&euro;{{$current_product_total_price}}</td>
+                    <td class="text-right">&euro;{{$current_product_total_price}}</td>
                   </tr>
                 @endforeach
+
+                <tr class="im-total-border">
+                  <td colspan="5" class="text-right text-bold">Total due: &euro;{{$total}}</td>
+                </tr>
 
 							</tbody>
 						</table>
