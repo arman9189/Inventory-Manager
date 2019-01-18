@@ -18,7 +18,11 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        //
+        // get all orders
+        $orders = Order::all();
+
+        // return view with orders
+        return view('orders.index')->with('orders', $orders);
     }
 
     /**
@@ -100,9 +104,19 @@ class OrdersController extends Controller
      * @param  \App\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public function show($order_id)
     {
-        //
+        // get the order
+        $order = Order::find($order_id);
+
+        // get products
+        $order_products = DB::table('order_products')
+        ->where('order_id', $order_id)
+        ->join('products', 'order_products.product_id', '=', 'products.id')
+        ->get();
+
+        // return view
+        return view('orders.show')->with('order', $order)->with('products', $order_products);
     }
 
     /**

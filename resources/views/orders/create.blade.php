@@ -54,7 +54,7 @@
             </div>
 
 						<div class="form-group">
-							<a id="more" class="btn btn-block btn-default">+</a>
+							<a id="more" class="btn btn-block btn-default"><i class="fa fa-plus"></i></a>
 						</div>
 
 						<div class="row">
