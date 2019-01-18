@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Customer;
+use App\Order;
 use Illuminate\Http\Request;
 
 class CustomersController extends Controller
@@ -82,9 +83,10 @@ class CustomersController extends Controller
     {
         // get the customer
         $customer = Customer::find($customer);
+        $orders = Order::where('customer_id', $customer->id)->get();
 
         // return view
-        return view('customers.show')->with('customer', $customer);
+        return view('customers.show')->with('customer', $customer)->with('orders', $orders);
     }
 
     /**
