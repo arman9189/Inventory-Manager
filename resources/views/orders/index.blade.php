@@ -36,9 +36,9 @@
 	                    $label = 'info';
 	                  } elseif(in_array($order->status, ['Shipped'])) {
 	                    $label = 'success';
-	                  } elseif(in_array($order->status, ['Cancelled', 'Backorder'])) {
+	                  } elseif(in_array($order->status, ['Cancelled', 'Back order'])) {
 	                    $label = 'danger';
-	                  }
+	                  } else {$label = '';}
 	                @endphp
 
 	                <tr>
