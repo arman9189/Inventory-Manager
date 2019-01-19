@@ -34,7 +34,7 @@
             <p>Inventory-Manager is based on the front-end theme <a target="_blank" href="https://adminlte.io/themes/AdminLTE/index2.html">AdminLTE</a>.</p>
 					</div>
           <div class="box-footer">
-            <p class="text-muted">Current version: 0.8.9</p>
+            <p class="text-muted">Current version: 0.9.3</p>
           </div>
 				</div>
 			</div>

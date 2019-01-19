@@ -116,107 +116,150 @@ return [
         ],
         'PRODUCT MANAGEMENT',
         [
-            'text' => 'New product',
-            'url'  => '/products/create',
-            'icon' => 'plus',
+          'text' => 'Products',
+          'icon' => 'dollar',
+          'submenu' => [
+            [
+              'text' => 'New product',
+              'icon' => 'plus',
+              'url' => '/products/create',
+            ],
+            [
+              'text' => 'View products',
+              'icon' => 'search',
+              'url' => '/products',
+            ],
+          ],
         ],
         [
-            'text' => 'View inventory',
-            'url'  => '/products',
-            'icon' => 'search',
-        ],
-        'PRODUCT CATEGORIES',
-        [
-            'text' => 'New product category',
-            'url'  => '/product-categories/create',
-            'icon' => 'plus',
-        ],
-        [
-            'text' => 'View product categories',
-            'url'  => '/product-categories',
-            'icon' => 'search',
+          'text' => 'Product categories',
+          'icon' => 'asterisk',
+          'submenu' => [
+            [
+              'text' => 'New category',
+              'icon' => 'plus',
+              'url' => '/product-categories/create',
+            ],
+            [
+              'text' => 'View categories',
+              'icon' => 'search',
+              'url' => '/product-categories',
+            ]
+          ],
         ],
         'STOCK MANAGEMENT',
         [
-            'text' => 'Check in products',
-            'url'  => '/stock/add',
-            'icon' => 'plus-square',
+          'text' => 'Manage stock',
+          'icon' => 'truck',
+          'submenu' => [
+            [
+              'text' => 'Check in products',
+              'icon' => 'plus-square',
+              'url' => '/stock/add',
+            ],
+            [
+              'text' => 'Check out products',
+              'icon' => 'minus-square',
+              'url' => '/stock/remove',
+            ],
+            [
+              'text' => 'Move products',
+              'icon' => 'exchange',
+              'url' => '/stock/move',
+            ],
+          ],
         ],
         [
-            'text' => 'Check out products',
-            'url'  => '/stock/remove',
-            'icon' => 'minus-square',
+          'text' => 'Storage locations',
+          'icon' => 'home',
+          'submenu' => [
+            [
+              'text' => 'New storage location',
+              'icon' => 'plus',
+              'url' => '/storage-locations/create',
+            ],
+            [
+              'text' => 'View storage locations',
+              'icon' => 'search',
+              'url' => '/storage-locations',
+            ],
+          ],
         ],
         [
-            'text' => 'Move products',
-            'url'  => '/stock/move',
-            'icon' => 'arrows',
+          'text' => 'Suppliers',
+          'icon' => 'automobile',
+          'submenu' => [
+            [
+              'text' => 'New supplier',
+              'icon' => 'plus',
+              'url' => '/suppliers/create',
+            ],
+            [
+              'text' => 'View suppliers',
+              'icon' => 'search',
+              'url' => '/suppliers',
+            ],
+          ],
         ],
-        'STORAGE LOCATIONS',
+        'SALES',
         [
-            'text' => 'Add storage location',
-            'url'  => '/storage-locations/create',
-            'icon' => 'plus',
-        ],
-        [
-            'text' => 'View storage locations',
-            'url'  => '/storage-locations',
-            'icon' => 'search',
-        ],
-        'SUPPLIERS',
-        [
-            'text' => 'New supplier',
-            'url'  => '/suppliers/create',
-            'icon' => 'plus',
-        ],
-        [
-            'text' => 'View suppliers',
-            'url'  => '/suppliers',
-            'icon' => 'search',
-        ],
-        'CUSTOMERS',
-        [
-            'text' => 'New customer',
-            'url'  => '/customers/create',
-            'icon' => 'plus',
-        ],
-        [
-            'text' => 'View customers',
-            'url'  => '/customers',
-            'icon' => 'search',
-        ],
-        'ORDERS',
-        [
-            'text' => 'New order',
-            'url'  => '/orders/create',
-            'icon' => 'plus',
+          'text' => 'Orders',
+          'icon' => 'file',
+          'submenu' => [
+            [
+              'text' => 'New order',
+              'icon' => 'plus',
+              'url' => '/orders/create',
+            ],
+            [
+              'text' => 'View orders',
+              'icon' => 'search',
+              'url' => '/orders',
+            ],
+          ],
         ],
         [
-            'text' => 'View orders',
-            'url'  => '/orders',
-            'icon' => 'search',
-        ],
-        'USERS',
-        [
-            'text' => 'New user',
-            'url'  => '/users/create',
-            'icon' => 'plus',
-        ],
-        [
-            'text' => 'View users',
-            'url'  => '/users',
-            'icon' => 'search',
+          'text' => 'Customers',
+          'icon' => 'shopping-cart',
+          'submenu' => [
+            [
+              'text' => 'New customer',
+              'icon' => 'plus',
+              'url' => '/customers/create',
+            ],
+            [
+              'text' => 'View customers',
+              'icon' => 'search',
+              'url' => '/customers',
+            ],
+          ],
         ],
         'OTHER',
         [
-            'text' => 'Settings',
-            'url'  => '/settings',
-            'icon' => 'cogs',
+          'text' => 'Employees',
+          'icon' => 'users',
+          'submenu' => [
+            [
+              'text' => 'New employee',
+              'icon' => 'plus',
+              'url' => '/users/create',
+            ],
+            [
+              'text' => 'View employees',
+              'icon' => 'search',
+              'url' => '/users',
+            ],
+          ],
         ],
         [
-            'text' => 'About',
-            'url'  => '/about',
-            'icon' => 'info-circle',
+          'text' => 'About',
+          'icon' => 'info-circle',
+          'url' => '/about',
+        ],
+        [
+          'text' => 'Settings',
+          'icon' => 'cogs',
+          'url' => '/settings',
         ],
     ],
 
