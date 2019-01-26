@@ -43,10 +43,10 @@
 
 	                <tr>
 	                  <td>{{$order->id}}</td>
-	                  <td><a href="/customers/{{$order->customer->id}}">{{$order->customer->name}}</a></td>
+	                  <td><a href="{{url('')}}/customers/{{$order->customer->id}}">{{$order->customer->name}}</a></td>
 	                  <td><span class="label label-{{$label}}">{{$order->status}}</span></td>
 	                  <td>{{$order->created_at}}</td>
-                    <td><a href="/orders/{{$order->id}}" class="btn btn-default">View</a></td>
+                    <td><a href="{{url('')}}/orders/{{$order->id}}" class="btn btn-default">View</a></td>
 	                </tr>
 	              @endforeach
 

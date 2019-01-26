@@ -80,8 +80,8 @@
 
         </div>
         <div class="box-footer clearfix">
-          <a href="/orders/create" class="btn btn-sm btn-default pull-left">New Order</a>
-          <a href="/orders" class="btn btn-sm btn-default pull-right">All orders</a>
+          <a href="{{url('')}}/orders/create" class="btn btn-sm btn-default pull-left">New Order</a>
+          <a href="{{url('')}}/orders" class="btn btn-sm btn-default pull-right">All orders</a>
         </div>
       </div>
     </div>
