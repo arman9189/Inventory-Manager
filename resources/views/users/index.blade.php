@@ -34,7 +34,7 @@
 										<td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
                     <td>{{$user->created_at}}</td>
-										<td><a href="/users/{{$user->id}}/edit" class="btn btn-default">Edit</a></td>
+										<td><a href="{{url('')}}/users/{{$user->id}}/edit" class="btn btn-default">Edit</a></td>
                     <td>
                       {!! Form::open(['action' => ['UsersController@destroy', $user->id], 'method' => 'post']) !!}
                         {{Form::hidden('_method', 'DELETE')}}
