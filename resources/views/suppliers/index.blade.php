@@ -29,9 +29,9 @@
 								@foreach ($suppliers as $supplier)
 									<tr>
 										<td>{{$supplier->id}}</td>
-										<td><a href="/suppliers/{{$supplier->id}}">{{$supplier->name}}</a></td>
+										<td><a href="{{url('')}}/suppliers/{{$supplier->id}}">{{$supplier->name}}</a></td>
 										<td><a href="{{$supplier->website}}" target="_blank">{{$supplier->website}}</a></td>
-										<td><a href="/suppliers/{{$supplier->id}}/edit" class="btn btn-default">Edit</a></td>
+										<td><a href="{{url('')}}/suppliers/{{$supplier->id}}/edit" class="btn btn-default">Edit</a></td>
 									</tr>
 								@endforeach
 
